@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+        function chancetext(){
+         var el=document.getElementById('btn1')
+         el.textContent="Submited"
+       
+        } 
+        function testResults(form) {
+            var TestVar = form.inputbox.value;
+            alert("You typed: " + TestVar);}
+        
+            function CalculateAge(form) {
+            var TestVar = form.inputbox.value;
+            const d= new Date();
+            var AGE= d.getFullYear()-TestVar;
+            alert("AGE: " + AGE);}
+    </script>
+</head>
+<body style="text-align: center; margin-top:50px;" >
+    <button type="button"  id="btn1" onclick="chancetext()">
+        Submit
+    </button>
+    <br><br>
+    <form NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <br>
+        <input TYPE="text" NAME="inputbox" VALUE="">
+        <P>
+        <input TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+    </from>
+
+    <br><br>
+    <form NAME="myform" ACTION="" METHOD="GET">Enter year of birth in the box: <br>
+        <input TYPE="text" NAME="inputbox" VALUE="">
+        <P>
+        <input TYPE="button" NAME="button" Value="Calculate" onClick="CalculateAge(this.form)">
+        
+    </from>
+</body>
+</html>
